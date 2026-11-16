@@ -1,0 +1,17 @@
+body{
+    background-color: #838568;
+}
+h1{
+    color: #F9F7E3;
+    font-family: 'Starborn', sans-serif;
+    text-decoration: underline dashed;
+    text-align: center;
+    padding: 80px;
+    font-size: 80px;
+}
+a{
+    color: #F9F7E3;
+    font-family: 'Starborn', sans-serif;
+    padding-left: 700px;
+    font-size: 70px;
+}
