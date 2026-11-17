@@ -14,12 +14,44 @@ p{
     font-family: 'Starborn', sans-serif;
     text-align: center;
     font-size: 50px;
+    padding-bottom: 20px;
     text-decoration: underline dashed;
 }
 .card{
-    position: relative;
     width: 300px;
     height: 250px;
     perspective: 1000px;
     cursor: pointer;
+}
+.card-inner{
+    position: relative;
+    width: 300px;
+    height: 250px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.card-front, .card-inner{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 30px;
+    font-family: 'Starborn', sans-serif;
+    box-shadow: 0 4px 12px #686C54;
+    backface-visibility: hidden;
+}
+.card-front{
+    background-color: #F9F7E3;
+    color: #838568;
+}
+.card-back{
+    background-color: #F9F7E3;
+    color: #838568
+    transform: rotateY(180deg);
+}
+.card.flipped, .card-inner{
+    transform: rotateY(180deg);
 }
