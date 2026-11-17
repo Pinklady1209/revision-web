@@ -18,25 +18,26 @@ p{
     text-decoration: underline dashed;
 }
 .card{
-    width: 300px;
-    height: 250px;
+    width: 800px;
+    height: 300px;
     perspective: 1000px;
     cursor: pointer;
 }
 .card-inner{
     position: relative;
-    width: 300px;
-    height: 250px;
+    width: 800px;
+    height: 300px;
     transition: transform 0.6s;
     transform-style: preserve-3d;
 }
-.card-front, .card-inner{
+.card-front, .card-back{
     position: absolute;
     inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    box-sizing: border-box;
     border-radius: 12px;
     font-size: 30px;
     font-family: 'Starborn', sans-serif;
@@ -49,9 +50,15 @@ p{
 }
 .card-back{
     background-color: #F9F7E3;
-    color: #838568
+    color: #838568;
     transform: rotateY(180deg);
 }
-.card.flipped, .card-inner{
+.card.flipped .card-inner{
     transform: rotateY(180deg);
+}
+.deck{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
