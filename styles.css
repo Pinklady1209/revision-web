@@ -18,24 +18,25 @@ p{
     text-decoration: underline dashed;
 }
 .card{
-    width: 800px;
-    height: 300px;
+    width: 550px;
+    height: 350px;
     perspective: 1000px;
     cursor: pointer;
+    padding: 50px;
 }
 .card-inner{
     position: relative;
-    width: 800px;
-    height: 300px;
+    width: 550px;
+    height: 350px;
     transition: transform 0.6s;
     transform-style: preserve-3d;
 }
 .card-front, .card-back{
     position: absolute;
     inset: 0;
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: center;
+    justify-content: stretch;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 12px;
@@ -56,9 +57,8 @@ p{
 .card.flipped .card-inner{
     transform: rotateY(180deg);
 }
-.deck{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 300px;
 }
