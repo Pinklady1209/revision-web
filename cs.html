@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.cdnfonts.com/css/starborn' rel="stylesheet">
+        <link rel="icon" type="image/png" href="catboy david no bg.png">
+        <title>Revision_@Dragaroni</title>
+</head>
+<style>
+    body{
+    background-color: #611427;
+    }
+    h1{
+        color: #F9F7E3;
+        font-family: 'Starborn', sans-serif;
+        text-decoration: underline dashed;
+        text-align: center;
+        padding: 10px;
+        font-size: 80px;
+    }
+    p{
+        color: #F9F7E3;
+        font-family: 'Starborn', sans-serif;
+        text-align: center;
+        font-size: 50px;
+        padding-bottom: 20px;
+        text-decoration: underline dashed;
+    }
+    .card{
+        width: 700px;
+        height: 350px;
+        perspective: 1000px;
+        cursor: pointer;
+    }
+    .card-inner{
+        position: relative;
+        width: 700px;
+        height: 350px;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+    .card-front, .card-back{
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 12px;
+        font-size: 30px;
+        font-family: 'Starborn', sans-serif;
+        box-shadow: 0 4px 12px #571427;
+        backface-visibility: hidden;
+    }
+    .card-front{
+        background-color: #F9F7E3;
+        color: #611427;
+    }
+    .card-back{
+        background-color: #F9F7E3;
+        color: #611427;
+        transform: rotateY(180deg);
+    }
+    .card.flipped .card-inner{
+        transform: rotateY(180deg);
+    }
+    .deck{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        gap: 20px;
+    }
+    .navbar{
+    background-color: #F9F7E3;
+    overflow: hidden;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    }
+    .navbar a{
+        float: left;
+        display: block;
+        color: #611427;
+        text-align: center;
+        font-family: 'Starborn', sans-serif;
+        text-decoration: none;
+        padding: 20px;
+        font-size: 25px;
+    }
+    .navbar a:hover{
+        background-color: #e0deca;
+    }
+</style>
+<body>
+    <h1>Year 9 Computer Science revision cards</h1>
+    <p>HTML and CSS:</p>
+    <div class="cards">
+        <div class="deck">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">What does HTML stand for?</div>
+                    <div class="card-back">HyperText Markup Language.</div>
+                </div>
+            </div>
+        </div>
+        <div class="deck">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">What is HTML?</div>
+                    <div class="card-back">It is the standard markup language for creating web pages.</div>
+                </div>
+            </div>
+        </div>
+        <div class="deck">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">What does CSS stand for?</div>
+                    <div class="card-back">Cascading Style Sheets.</div>
+                </div>
+            </div>
+        </div>
+        <div class="deck">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">What is CSS?</div>
+                    <div class="card-back">The language used to style a web page</div>
+                </div>
+            </div>
+        </div>
+        <div class="deck">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">What does a CSS rule consist of?</div>
+                    <div class="card-back">A selector and a declaration block.</div>
+                </div>
+            </div>
+        </div>
+        <div class="deck">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">Give 1 good other option to learn HTML.</div>
+                    <div class="card-back">You can use a text editor like Notepad (PC/laptop) or TextEdit/Notes (MacOS).</div>
+                </div>
+            </div>
+        </div>
+        <div class="deck">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">What does CSS control?</div>
+                    <div class="card-back">It controls the layout, colours, typography, and responsive behavours of your websites.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar">
+        <a href="index.html">History</a>
+        <a href="geography.html">Geography</a>
+        <a href="cs.html">Computing</a>
+    </div>
+</body>
