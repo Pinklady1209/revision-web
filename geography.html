@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.cdnfonts.com/css/starborn' rel="stylesheet">
+        <link rel="icon" type="image/png" href="catboy david no bg.png">
+        <title>Revision_@Dragaroni</title>
+</head>
+<style>
+    body{
+    background-color: #F4BC7A;
+    }
+    h1{
+        color: #F9F7E3;
+        font-family: 'Starborn', sans-serif;
+        text-decoration: underline dashed;
+        text-align: center;
+        padding: 10px;
+        font-size: 80px;
+    }
+    p{
+        color: #F9F7E3;
+        font-family: 'Starborn', sans-serif;
+        text-align: center;
+        font-size: 50px;
+        padding-bottom: 20px;
+        text-decoration: underline dashed;
+    }
+    .card{
+        width: 700px;
+        height: 350px;
+        perspective: 1000px;
+        cursor: pointer;
+    }
+    .card-inner{
+        position: relative;
+        width: 700px;
+        height: 350px;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+    .card-front, .card-back{
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 12px;
+        font-size: 30px;
+        font-family: 'Starborn', sans-serif;
+        box-shadow: 0 4px 12px #BC815E;
+        backface-visibility: hidden;
+    }
+    .card-front{
+        background-color: #F9F7E3;
+        color: #F4BC7A;
+    }
+    .card-back{
+        background-color: #F9F7E3;
+        color: #F4BC7A;
+        transform: rotateY(180deg);
+    }
+    .card.flipped .card-inner{
+        transform: rotateY(180deg);
+    }
+    .deck{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        gap: 20px;
+    }
+    .navbar{
+    background-color: #F9F7E3;
+    overflow: hidden;
+    bottom: 0;
+    position: bottom;
+    width: 100%;
+    }
+    .navbar a{
+        float: left;
+        display: block;
+        color: #F4BC7A;
+        text-align: center;
+        font-family: 'Starborn', sans-serif;
+        text-decoration: none;
+        padding: 14px 16px;
+        font-size: 25px;
+    }
+    .navbar a:hover{
+        background-color: #e0deca;
+    }
+</style>
+<body>
+    <h1>Year 9 Geography revision cards</h1>
+    <p>Globalisation:</p>
+    <div class="cards">
+        <div class="deck">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">Define globalisation.</div>
+                    <div class="card-back">The increasing global connectivity of the world especially by large companies producing and trading goods in many different countries</div>
+                </div>
+            </div>
+        </div>
+        <div class="deck">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">Define food miles.</div>
+                    <div class="card-back">The distance food is transported from the time of its making until it reaches the consumer</div>
+                </div>
+            </div>
+        </div>
+        <div class="deck">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">What is a TNC?</div>
+                    <div class="card-back">Transnational corporations are companies that operate in at least two countries.</div>
+                </div>
+            </div>
+        </div>
+        <div class="deck">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">What has globalisation allowed TNCs to do?</div>
+                    <div class="card-back">To grow because improved technology and transport means products and raw resources can move quickly around the world.</div>
+                </div>
+            </div>
+        </div>
+        <div class="deck">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">Give 3 advantages of global fashion.</div>
+                    <div class="card-back">Cheap for consumers; investments in LICs and NICs; more jobs in warehouses and factories.</div>
+                </div>
+            </div>
+        </div>
+        <div class="deck">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">Give 3 disadvantages of global fashion.</div>
+                    <div class="card-back">Child labour; poor working conditions; farmers are paid low prices for crops like cotton.</div>
+                </div>
+            </div>
+        </div>
+        <div class="deck">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">What does PEAL stand for?</div>
+                    <div class="card-back">P - make your point; E - provide evidence; A - analyse the question; L - link back to your original point.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar">
+        <a href="index.html">History</a>
+        <a href="geography.html">Geography</a>
+    </div>
+</body>
